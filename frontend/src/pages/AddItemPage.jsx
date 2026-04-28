@@ -11,7 +11,7 @@ function AddItemPage() {
       navigate("/");
     } catch (error) {
       console.error("Failed to create item", error);
-      alert("Failed to create item");
+      alert(`Failed to create item: ${error.response?.data?.message || error.message}`);
     }
   };
 
